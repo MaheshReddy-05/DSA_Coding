@@ -7,7 +7,7 @@ class Node<T>{
         this.data = data;
     }
 }
-public class App {
+public class InputOpp {
     public static void main(String[] args) throws Exception {
         Node<Integer> head = takeInput();
         // head = insertR(head, 4, 20);

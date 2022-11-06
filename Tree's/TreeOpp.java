@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class App {
+public class TreeOpp {
     public static void main(String[] args) throws Exception {
         TreeNode<Integer> root = new TreeNode<Integer>(10);
         TreeNode<Integer> root1 = new TreeNode<Integer>(11);
@@ -41,5 +41,13 @@ public class App {
             ans.add(subList);
         }
         return ans;
+    }
+}
+class TreeNode<T> {
+    T data;
+    ArrayList<TreeNode<T>> children;
+    TreeNode(T data){
+        this.data = data;
+        this.children = new ArrayList<>();
     }
 }

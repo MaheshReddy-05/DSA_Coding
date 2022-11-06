@@ -1,4 +1,4 @@
-public class App {
+public class Kadanesalgo {
     public static void main(String[] args) throws Exception {
 
         int arr[] = {1,2,3,4,-100,5,5,6,-1,3};

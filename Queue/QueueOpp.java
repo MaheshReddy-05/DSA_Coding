@@ -1,10 +1,21 @@
-import java.util.Collection;
-public class Queue {
+import java.util.*;
+public class QueueOpp {
+    public static void main(String[] args) throws Exception {
+        queue obj = new queue();
+        obj.enQueue(10);
+        obj.enQueue(13);
+        obj.enQueue(134);
+        obj.display();
+        Queue<Integer> l = new LinkedList<Integer>();
+
+    }
+}
+class queue {
     private int data[];
     int front = -1;
     int rare = -1;
     int size = 0;
-    public Queue(){
+    public queue(){
         data = new int[5];
         size = 5;
     }
@@ -19,7 +30,7 @@ public class Queue {
             return false;
         }
     }
-    public Queue(int arl){
+    public queue(int arl){
         data = new int[arl];
     }
     public void enQueue(int x){

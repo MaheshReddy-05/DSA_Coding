@@ -1,5 +1,5 @@
 import java.util.*;
-public class App {
+public class EquilibriumIndex {
     public static void main(String[] args) throws Exception {
         int arr[] = {1,4,9,3,2};
         int n = arr.length;

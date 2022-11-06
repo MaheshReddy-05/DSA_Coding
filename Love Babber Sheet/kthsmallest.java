@@ -45,5 +45,6 @@ public class kthsmallest {
       }  
       int k=sc.nextInt();
       System.out.println(kthsmallest(arr, 0, arr.length-1,k));
+      sc.close();
     }
 }
