@@ -8,6 +8,7 @@ public class DFS{
         int edg = sc.nextInt();
         inputGraph(adjMatrix, n,edg);
         // int adjMatrix[][] = { {0,1,1,0,0},{1,0,0,1,0},{1,0,0,0,1},{0,1,0,0,0},{0,0,1,0,0} };
+        //dudue how all there
         for(int[]i : adjMatrix){
             for (int j  : i) {
                 System.out.print(j);
