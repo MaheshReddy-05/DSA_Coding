@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class App{
+public class BTOpp{
     public static void main(String[] args) {
         BTN<Integer> Root = Input(true,0,false);
         // treeDisplay(Root);
