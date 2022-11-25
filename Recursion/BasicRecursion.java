@@ -80,6 +80,9 @@ public class BasicRecursion{
                 ArrayReverse(n+1, lst);
             }
         }
+        public static void print() {
+            System.out.println("Hello Every Once How all there");
+        }
         public static int Mult(int x,int y){
             if(y==0){
                 return 1;
