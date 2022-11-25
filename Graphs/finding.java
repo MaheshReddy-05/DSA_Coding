@@ -12,7 +12,7 @@ public class finding {
         Queue<int[]>  q = new LinkedList<>();
         q.add(start);
 
-        
+
         while(!q.isEmpty()){
             level++;
             int size = q.size();
