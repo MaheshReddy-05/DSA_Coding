@@ -62,15 +62,16 @@ public class BTOpp{
                 System.out.println("Enter Right Node of : "+ parent);
             }
         }
-        Scanner sc = new Scanner(System.in);
-        int data = sc.nextInt();
-        if(data==-1){
-            return null;
+        try (Scanner sc = new Scanner(System.in)) {
+            int data = sc.nextInt();
+            if(data==-1){
+                return null;
+            }
+            BTN<Integer> Root = new BTN<>(data);
+            Root.left = Input(false,data,true);
+            Root.right = Input(false,data,false);
+            return Root;
         }
-        BTN<Integer> Root = new BTN<>(data);
-        Root.left = Input(false,data,true);
-        Root.right = Input(false,data,false);
-        return Root;
     }
     public static void treeDisplay(BTN<Integer> Root){
         if(Root==null){

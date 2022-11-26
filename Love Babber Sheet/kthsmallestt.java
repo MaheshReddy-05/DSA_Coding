@@ -1,5 +1,5 @@
 import java.util.*;
-public class kthsmallest {
+public class kthsmallestt {
     public static int kthsmallest(int [] arr, int low, int high, int k)
     {
         int pivot=getpivot(arr,low,high);
