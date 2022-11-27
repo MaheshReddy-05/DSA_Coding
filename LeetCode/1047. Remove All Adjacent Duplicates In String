@@ -1,0 +1,30 @@
+class Solution {
+    public String removeDuplicates(String s) {
+        String ans = "";
+        Stack<Character> sk = new Stack<>();
+        for(int i=0;i<s.length();i++){
+            if(!sk.isEmpty()){
+                if( sk.peek() == s.charAt(i)){
+                    sk.pop();
+                }
+                else{
+                    sk.push(s.charAt(i));
+                } 
+            }
+            else{
+                    // System.out.print(s.charAt(i)+" ");
+                sk.push(s.charAt(i));
+            }
+        }
+        // System.out.println(sk.size());
+        int siz = sk.size();
+        for(int i=0;i<siz;i++){
+            System.out.print(sk.peek()+" ");
+            String k = "";
+            k+= sk.pop();
+            k+= ans;
+            ans = k;
+        }
+        return ans;
+    }
+}
