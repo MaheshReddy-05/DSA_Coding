@@ -2,10 +2,11 @@
 
 ### Character Shortcuts
 
-char ch[] = s.toCharArray();  <!-- Where s is a character -->
 
 ### String Shortcuts
-Reverse a string String.valueOf(sb.reverse())
+<!-- s is consider as String -->
+char ch[] = s.toCharArray();  
+String.valueOf(s.reverse())
 
 
 ### Comparator 
