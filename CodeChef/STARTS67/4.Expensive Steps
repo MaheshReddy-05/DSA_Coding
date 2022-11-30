@@ -1,0 +1,32 @@
+Problem link: https://www.codechef.com/problems/EXPSTP
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		while(n!=0){
+		    n--;
+		    int s = sc.nextInt();
+		    int x1 = sc.nextInt();
+		    int x2 = sc.nextInt();
+		    int y1 = sc.nextInt();
+		    int y2 = sc.nextInt();
+		    int In = (Math.abs(x1-y1)+Math.abs(x2-y2));
+		    int Out = dist(x1,x2,s) + dist(y1,y2,s);
+		    System.out.println(Math.min(In,Out));
+		}
+	}
+	public static int dist(int x1,int x2,int N){
+	    int mi = Math.abs(0-Math.min(x1,x2));
+	    int mai  = Math.abs(N-Math.max(x1,x2))+1;
+	    int k = Math.min(mi,mai);
+	    return k;
+	}
+}
