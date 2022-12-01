@@ -1,0 +1,45 @@
+Problem Link: https://www.codechef.com/START67D/problems/MAXAGRY?tab=statement
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+        long t=sc.nextLong();
+
+        while (t>0) {
+            long n=sc.nextLong();
+            long k=sc.nextLong();
+            if((2*k)>n){
+                k=n/2;
+            }
+            long ans=0;
+            ans+=find(n, k);
+            ans+=k*(n-(2*k));
+            ans+=k*(k-1)/2;
+
+            System.out.println(ans);
+
+            
+
+
+            t--;
+
+        }
+    }
+
+    static long find(long n,long k){
+       long g=n-k-1;
+       long ans=0;
+       ans+=n*(n-1)/2;
+       ans-=g*(g+1)/2;
+
+        return ans;
+    }
+}
