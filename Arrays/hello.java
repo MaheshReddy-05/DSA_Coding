@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class hello{
     public static void main(String[] args) {
         int arr[] = {1,0,1,1,1,1,0,0,1,0};
@@ -11,8 +13,9 @@ class hello{
                 j++;
             }
         }
-        for (int i : arr) {
-            System.out.print(i+" ");
-        }
+        Integer arrr[] = {10,20,30,40,50};
+        arrr[3] = j;
+        j = arrr[2];
+        System.out.println(Arrays.asList(arrr)+" "+j);
     }
 }
