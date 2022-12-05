@@ -14,14 +14,22 @@ String.valueOf(s.reverse())
 - <strong> Converting Arrays to list </strong>
 You can only convert wrapper class to list
 Integer arr[] = {blah....};
-<lable style="color:Tomato;">list\<Object> al = Arrays.asList(arr);</lable>
+list\<Object> al = Arrays.asList(arr);
 
-- <b>Array fill</b>
-Filling array with same number 
-<lable style="color:Tomato;">Array.fill(arr,-1);</lable>
-- <b>Array Equal</b>
-Return boolean comparing arrays
-Arrays.
+- <b>Array fill</b>  
+Filling array with same number  
+Array.fill(arr,-1); 
+- <b>Array Equal</b> 
+Return boolean comparing arrays  
+Arrays.equals(arr1,arr2); 
+- <b>Array Sort</b> 
+Sorting array  
+Arrays.sort(arr);  
+- <b>Array BinarySearch</b>
+Searching a number using binarySearch  
+Arrays.binarySearch(arr,10);
+
+
 
 ### Comparator 
  <!-- Mainly used in sorting object inside data  -->

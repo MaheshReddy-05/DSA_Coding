@@ -13,6 +13,7 @@ class hello{
                 j++;
             }
         }
+        String sl = "Hello dude";
         Integer arrr[] = {10,20,30,40,50};
         arrr[3] = j;
         j = arrr[2];
