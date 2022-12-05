@@ -30,6 +30,10 @@ Searching a number using binarySearch
 Arrays.binarySearch(arr,10);
 
 
-
+### HashMap
+- <b>Enhanced Get Element</b>
+Used in insertion of frequency    
+hm.getOrDefault(arr[i],0)+1 ;   
+hm.put(arr[i],hm.getOrDefault(arr[i],0)+1)  
 ### Comparator 
  <!-- Mainly used in sorting object inside data  -->

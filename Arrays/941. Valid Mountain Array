@@ -1,0 +1,27 @@
+Problem Link: https://leetcode.com/problems/valid-mountain-array/description/
+
+class Solution {
+    public boolean validMountainArray(int[] arr) {
+        int al = arr.length;
+        if(al==0) return false;
+        int i = 0;
+        for(;i<al-1;i++){
+            if(arr[i]>=arr[i+1]) break;
+        }
+        if(i==0 || i ==al-1) return false;
+        for(;i<al-1;i++){
+            if(arr[i]<=arr[i+1]) return false;
+        }
+        return true;
+    }
+}
+
+Approach: 
+
+This had total 4 cases
+1 - True if first up and then down from there
+2 - False if total up
+3 - False if total down
+4 - False if length is zero
+
+2,3 are checked even after first up for loop if i is still in start or end represents up or down
