@@ -1,0 +1,19 @@
+Problem Link: https://leetcode.com/problems/rearrange-array-elements-by-sign/description/
+class Solution {
+    public int[] rearrangeArray(int[] arr) {
+        int p = 0;
+        int n = 1;
+        int ans[] = new int[arr.length];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>0){
+                ans[p] = arr[i];
+                p+=2;
+            }
+            else{
+                ans[n] = arr[i];
+                n+=2;
+            }
+        }
+        return ans;
+    }
+}
