@@ -1,0 +1,26 @@
+Problem Link: https://leetcode.com/problems/4sum-ii/description/
+
+class Solution {
+    public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
+        HashMap<Integer,Integer> hm = new HashMap<>();
+        for(int i=0;i<nums1.length;i++){
+            for(int j=0;j<nums1.length;j++){
+                int S_AB = nums1[i]+nums2[j];
+                hm.put((S_AB),hm.getOrDefault(S_AB,0)+1);
+            }
+        }
+        int ans = 0;
+        for(int i=0;i<nums3.length;i++){
+            for(int j=0;j<nums4.length;j++){
+                int S_CD = nums3[i]+nums4[j];
+                ans+=hm.getOrDefault(-S_CD,0);
+            }
+        }
+        return ans;
+    }
+}
+
+Approach:
+Dividing the arrays as 2 groups 
+Finding there sum add to HashMap
+later using 2nd group checking weather is it possible or not
