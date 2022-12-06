@@ -6,8 +6,15 @@
 
 ### String Shortcuts
 <!-- s is consider as String -->
-char ch[] = s.toCharArray();  
-String.valueOf(s.reverse())
+char ch[] = s.toCharArray(); 
+- <b>Char Array to String</b>  
+Adding all char array character to a single string
+String.valueOf(chararr);  
+
+### String Builder
+- <b>Reversing a string</b> 
+StringBuilder s = new StringBuilder("String");
+s.reverse()
 
 
 ### Array Shortcuts
