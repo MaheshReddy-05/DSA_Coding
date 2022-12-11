@@ -10,7 +10,7 @@ public class Subseq {
        }
     static void fun(List<List<Integer>> ls,List<Integer> ars, int init,int arr[]){
         if(init == arr.length){ 
-            ls.add(new ArrayList(ars));
+            ls.add(new ArrayList<>(ars));
             return;
         }
         else{

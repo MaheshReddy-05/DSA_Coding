@@ -1,0 +1,17 @@
+Problem Link: https://leetcode.com/problems/keep-multiplying-found-values-by-two/description/
+
+class Solution {
+    public int findFinalValue(int[] nums, int original) {
+        HashMap<Integer,Integer> hm = new HashMap<>();
+        for(int i:nums){
+            hm.put(i,1);
+        }
+        while(hm.containsKey(original)){
+            original = 2*original;
+        }
+        return original;
+    }
+}
+
+Approach:
+Just modified brute force followed

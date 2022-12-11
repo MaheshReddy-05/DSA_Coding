@@ -1,0 +1,28 @@
+Problem Link: https://leetcode.com/problems/number-of-provinces/description/
+
+class Solution {
+    public int findCircleNum(int[][] isConnected) {
+        int leng = isConnected.length;
+        if(leng==0) return 0;
+        boolean verify[] = new boolean[leng];
+        int ans = 0;
+        for(int i=0;i<leng;i++){
+            if(verify[i]==false){
+                ans++;
+                Queue<Integer> qu = new LinkedList<>();
+                qu.add(i);
+                verify[i] = true;
+                while(!qu.isEmpty()){
+                    int ele = qu.remove();
+                    for(int j = 0;j<leng;j++){
+                        if(isConnected[ele][j]==1 && verify[j]==false){
+                            qu.add(j);
+                            verify[j] =  true;
+                        }
+                    }
+                } 
+            }
+        }
+        return ans;
+    }
+}

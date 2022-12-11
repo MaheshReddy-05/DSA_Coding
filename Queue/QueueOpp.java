@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 public class QueueOpp {
     public static void main(String[] args) throws Exception {
         queue obj = new queue();
@@ -6,7 +6,7 @@ public class QueueOpp {
         obj.enQueue(13);
         obj.enQueue(134);
         obj.display();
-        Queue<Integer> l = new LinkedList<Integer>();
+        // Queue<Integer> l = new LinkedList<Integer>();
 
     }
 }

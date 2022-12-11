@@ -1,0 +1,24 @@
+Problem Link : https://leetcode.com/problems/decode-ways/description/
+class Solution {
+    public int numDecodings(String s) {
+        if(s.charAt(0)=='0') return 0;
+        int n = s.length();
+        int dp[] = new int[n+1];
+        for(int i=0;i<=n;i++) dp[i] = -1;
+        return helper(s,dp);
+    }
+    public int helper(String s,int dp[]){
+        if(s.length()<=1){
+            if(s.length()==1 && s.charAt(0)=='0') return 0;
+            return 1;
+        }
+        if(s.charAt(0)=='0') return 0;
+        if(dp[s.length()]!=-1) return dp[s.length()];
+        int on = helper(s.substring(1),dp);
+        int tw = 0;
+        if(s.charAt(0)-'0'==1 || s.charAt(0)-'0'==2 && s.charAt(1)-'0'<=6){
+            tw = helper(s.substring(2),dp);
+        }
+        return dp[s.length()] = on + tw;
+    }
+}

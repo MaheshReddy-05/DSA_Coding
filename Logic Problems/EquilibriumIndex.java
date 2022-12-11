@@ -1,8 +1,8 @@
-import java.util.*;
+// import java.util.*;
 public class EquilibriumIndex {
     public static void main(String[] args) throws Exception {
         int arr[] = {1,4,9,3,2};
-        int n = arr.length;
+        // int n = arr.length;
         int ls = 0;
         int rs = 0;
         for (int i = 1; i < arr.length; i++) {

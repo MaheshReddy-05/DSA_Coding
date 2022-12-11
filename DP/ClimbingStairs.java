@@ -1,11 +1,12 @@
 import java.util.*;
 public class ClimbingStairs {
     public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        System.out.println(helper(sc.nextInt()));
-        int [] dp = new int[n+1];
-        System.out.println(dp(n, dp));
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
+            System.out.println(helper(sc.nextInt()));
+            int [] dp = new int[n+1];
+            System.out.println(dp(n, dp));
+        }
     }
     public static int dp(int n,int []Dp){
         if(n==0){

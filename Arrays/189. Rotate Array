@@ -1,0 +1,31 @@
+Problem Link: https://leetcode.com/problems/rotate-array/description/
+
+class Solution {
+    public void rotate(int[] nums, int k) {
+        k = k%nums.length;
+        reverse(nums,0,nums.length-1);
+        reverse(nums,0,k-1);
+        reverse(nums,k,nums.length-1);
+    }
+    public int[] reverse(int[] arr,int si,int ei){
+        while(si<ei){
+            int tem = arr[si];
+            arr[si++] = arr[ei];
+            arr[ei--] = tem;
+        }
+        return arr;
+    }
+}
+
+Reverse array using for loop: 
+ int k = 0;
+ for(int i =si;i<=(si+ei)/2+1;i++){
+     int tem = arr[i];
+     arr[i] = arr[ei-k];
+     arr[ei-k] = tem;
+     k++;
+ }
+
+Approach: 
+Hint: Rotate number%length not multiple times
+This is basic idea reversing the array 3 time 
