@@ -1,0 +1,32 @@
+Problem Link: https://practice.geeksforgeeks.org/batch/Amazon-Test-Series/track/amazon-arrays/problem/max-and-second-max
+
+class Solution{
+    // Function to find largest and second largest element in the array
+    public static ArrayList<Integer> largestAndSecondLargest(int sizeOfArray, int arr[])
+    {
+        //code here.
+        int max = Integer.MIN_VALUE;
+        int secmax = Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>secmax){
+                if(arr[i]>max){
+                    int temp = max;
+                    max = arr[i];
+                    secmax = temp;
+                }
+                else{
+                    if(arr[i]!=max){
+                    secmax = arr[i];
+                    }
+                }
+            }
+        }
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(max);
+        al.add((secmax<0)? -1 : secmax);
+        return al;
+    }
+
+    Approach: 
+    check if great that secmax if then max else secmax in secmax
+    Check max and arr[i] equal or not if not only add it
