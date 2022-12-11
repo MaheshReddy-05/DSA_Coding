@@ -1,0 +1,25 @@
+Problem Link: https://practice.geeksforgeeks.org/batch/Amazon-Test-Series/track/amazon-arrays/problem/max-sum-in-the-configuration
+
+Reference: https://youtu.be/yroWfS5P2E4
+class GfG
+{
+    int max_sum(int A[], int n)
+    {
+	// Your code here
+	   int ans = 0;
+	   int sum = 0;
+	   int prev = sum;
+	   for(int i=0;i<n;i++){
+	       sum+= A[i];
+	       prev+=A[i]*i;
+	   }
+	   for(int i=0;i<n;i++){
+	       int sumAns =  prev + sum - n*A[n-1-i];
+	       ans = Math.max(ans,sumAns);
+	       prev = sumAns;
+	   }
+	   return ans;
+    }	
+}
+Approach: 
+Si+1 = Si + sum - n*A[n-1-i]

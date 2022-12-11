@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "kthsmallestt"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
