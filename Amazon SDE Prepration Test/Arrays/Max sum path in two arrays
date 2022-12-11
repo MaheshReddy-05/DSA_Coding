@@ -1,0 +1,52 @@
+Problem Link: https://practice.geeksforgeeks.org/batch/Amazon-Test-Series/track/amazon-arrays/problem/max-sum-path-in-two-arrays
+
+class Solution
+{
+    /*You are required to complete this method
+    * ar1 : 1st array
+    * ar2 : 2nd array
+    */
+    int maxPathSum(int ar1[], int ar2[])
+    {
+        // Your code here
+        int ans = 0;
+        int i = 0;
+        int j = 0;
+        int sum1 = 0;
+        int sum2 = 0;
+        while(i<ar1.length && j<ar2.length){
+            if(ar1[i]<ar2[j]){
+                sum1+=ar1[i++];
+            }
+            else if(ar1[i]>ar2[j]){
+                sum2+=ar2[j++];
+            }
+            else if(ar1[i]==ar2[j]){
+                ans += Math.max(sum1,sum2);
+                // ans+=ar2[i];
+                sum1 = ar1[i++];
+                sum2 = ar2[j++];
+            }
+        }
+        if(i>=ar1.length && j<ar2.length){
+            for(;j<ar2.length;j++){
+                sum2+=ar2[j];
+            }
+        }
+        else if(j>=ar2.length && i<ar1.length){
+            for(;i<ar1.length;i++){
+                sum1+=ar1[i];
+            }
+        }
+        ans+=Math.max(sum1,sum2);
+        return ans;
+    }
+}
+
+Approach:
+2 pointer 
+Finding the sum1 for arr1 and sum2 for arr2 until same element occurs 
+later comparing which is max and adding that to the ans variable
+if 1 array is completed and start adding other array element to its elements
+and finally add the remaining sum max to ans and return 
+The End
