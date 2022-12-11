@@ -1,0 +1,37 @@
+Problem Link: https://practice.geeksforgeeks.org/batch/Amazon-Test-Series/track/amazon-arrays/problem/third-largest-element
+
+class Solution
+{
+    int thirdLargest(int arr[], int n)
+    {
+	    if(arr.length<3) return -1;
+	    int first = Integer.MIN_VALUE;
+	    int sec = Integer.MIN_VALUE;
+	    int third = Integer.MIN_VALUE;
+	    for(int i=0;i<arr.length;i++){
+	        if(arr[i]>third){
+	            if(first<arr[i]){
+	                int temp = first;
+	                first = arr[i];
+	                third = sec;
+	                sec = temp;
+	            }
+	            else if(sec<arr[i]){
+	                int temp = sec;
+	                sec = arr[i];
+	                third = temp;
+	            }
+	            else{
+	                third = arr[i];
+	            }
+	        }
+	    }
+	    return third;
+    }
+}
+
+Approach:
+2nd way:
+we can also run 3 time the for loop 
+In each loop pushing the highest to last 
+Bubble sort
