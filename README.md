@@ -44,3 +44,7 @@ hm.getOrDefault(arr[i],0)+1 ;
 hm.put(arr[i],hm.getOrDefault(arr[i],0)+1)  
 ### Comparator 
  <!-- Mainly used in sorting object inside data  -->
+
+### Easy Syntax
+- <b>If statement return a value</b>  
+(a>b) ? true : false ;
