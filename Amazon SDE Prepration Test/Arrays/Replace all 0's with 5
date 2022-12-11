@@ -1,0 +1,22 @@
+Problem Link: https://practice.geeksforgeeks.org/batch/Amazon-Test-Series/track/amazon-arrays/problem/replace-all-0s-with-5
+
+class GfG {
+    int convertfive(int num) {
+        // Your code here
+        String a = (""+num);
+        String ans = "";
+        for(int i=0;i<a.length();i++){
+            if(a.charAt(i)=='0'){
+                ans+='5';
+            }
+            else{
+                ans+=a.charAt(i);
+            }
+        }
+        return Integer.valueOf(ans);
+    }
+}
+
+Approach:
+Convert to string manipulatin
+later converting to Integer(Integer.valueOf(String))
