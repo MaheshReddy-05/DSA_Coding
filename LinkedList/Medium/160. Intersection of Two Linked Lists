@@ -1,0 +1,37 @@
+Problem Link: https://leetcode.com/problems/intersection-of-two-linked-lists/description/
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if(headA == null ||headB == null) return null;
+        ListNode it1 = headA;
+        ListNode it2 = headB;
+        while(it1!=it2){
+            if(it1 == null) {
+                it1 =headB;
+            }
+            else{
+                it1 = it1.next;
+            }
+            if(it2 == null){
+                it2 = headA;
+            }else{
+                it2 = it2.next;
+            }
+        }
+        return it1;
+    }
+}
+
+Approach:
+
+here even if there is no interaction also at a==b== null it will return null
