@@ -41,7 +41,14 @@ Arrays.binarySearch(arr,10);
 - <b>Enhanced Get Element</b>
 Used in insertion of frequency    
 hm.getOrDefault(arr[i],0)+1 ;   
-hm.put(arr[i],hm.getOrDefault(arr[i],0)+1)  
+hm.put(arr[i],hm.getOrDefault(arr[i],0)+1)   
+
+### PriorityQueue
+- <b>MIN Heap</b>  
+PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->a-b);
+- <b>MAX Heap</b>  
+PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->b-a);
+
 ### Comparator 
  <!-- Mainly used in sorting object inside data  -->
 
