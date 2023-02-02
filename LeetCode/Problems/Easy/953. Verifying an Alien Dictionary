@@ -1,0 +1,37 @@
+Problem Link: https://leetcode.com/problems/verifying-an-alien-dictionary/description/
+
+class Solution {
+    public boolean isAlienSorted(String[] words, String order) {
+        HashMap<Character ,Integer> hm = new HashMap<>();
+        for(int i=0;i<order.length();i++){
+            hm.put(order.charAt(i),i+1);
+        }
+        for(int i=0;i<words.length-1;i++){
+
+            if(!helper(words[i],words[i+1],hm)){
+                return false;
+            }
+        }
+        return true;
+    }
+    public boolean helper(String s1,String s2,HashMap<Character, Integer> hm){
+        int i = 0;
+        while(i<s1.length() && i<s2.length()){
+            if(s1.charAt(i)!=s2.charAt(i)){
+                if(hm.get(s1.charAt(i))<hm.get(s2.charAt(i))){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            i++;
+        }
+        if(s1.length()>s2.length()) return false;
+        return true;
+    }
+}
+
+Approach:
+
+first storing the order in hashmap and then checking all the words 
