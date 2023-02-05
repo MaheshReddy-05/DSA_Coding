@@ -1,0 +1,35 @@
+Problem Link: https://leetcode.com/problems/generate-parentheses/
+
+class Solution {
+    public List<String> generateParenthesis(int n) {
+        List<String> ls = new ArrayList<>();
+        helper(ls,"",0,0,n);
+        return ls;
+    }
+    public void helper(List<String> ls,String s,int open,int close,int n){
+        if(open==close && s.length()==2*n){
+            ls.add(s);
+            return;
+        }
+        String nl = s;
+        if(open>close){
+            s+=')';
+            helper(ls,s,open,close+1,n);
+        }
+        if(open<n){
+            nl+='(';
+            helper(ls,nl,open+1,close,n);
+        }
+    }
+}
+
+
+Approach:
+
+take to variables open and close which had the count of open and closed brackets
+
+2 condition every time u need to check
+1. if open is less than n then u can add open bracket
+2. if open is greater than close then u can add close 
+
+calling recursion on left part 
