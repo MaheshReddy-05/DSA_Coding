@@ -1,3 +1,4 @@
+package Medium;
 import java.util.Scanner;
 public class BTOpp{
     public static void main(String[] args) {
