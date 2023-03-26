@@ -1,0 +1,32 @@
+Problem Link: https://leetcode.com/problems/house-robber-ii/
+Author: Mahesh Reddy B N
+
+class Solution {
+    public int rob(int[] nums) {
+        if(nums.length==1) return nums[0];
+        return Math.max(f(nums,true),f(nums,false));
+    }
+    public int f(int[] nums,boolean first){
+        int si = 0;
+        int ei = nums.length;
+        if(first){
+            ei = nums.length-1;
+        }
+        else{
+            si = 1;
+        }
+        int prev1 = nums[si];
+        int prev2 = 0;
+        
+        for(int i=si+1;i<ei;i++){
+            int pic = nums[i];
+            if(i!=1){
+                pic+=prev2;
+            }
+            int npic = prev1;
+            prev2 = prev1;
+            prev1 = Math.max(pic,npic);
+        }
+        return prev1;
+    }
+}
