@@ -1,0 +1,18 @@
+Author: Mahesh Reddy BN
+
+Problem Link: https://leetcode.com/problems/concatenation-of-array/description/
+
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+        int nl = nums.length;
+        int ans[] = new int[2*nl];
+        int i=0;
+        for(;i<nl;i++){
+            ans[i] = nums[i];
+        }
+        for(i =nl;i<2*nl;i++){
+            ans[i] = nums[i-nl];
+        }
+        return ans;
+    }
+}
