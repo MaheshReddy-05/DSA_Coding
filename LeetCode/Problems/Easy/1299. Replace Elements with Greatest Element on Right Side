@@ -1,0 +1,16 @@
+Author: Mahesh Reddy BN
+Problem Link: https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/description/
+
+class Solution {
+    public int[] replaceElements(int[] arr) {
+        int al = arr.length;
+        int max = arr[al-1];
+        for(int i=al-2;i>=0;i--){
+            int prev = arr[i];
+            arr[i] = max;
+            max = Math.max(prev,max);
+        }
+        arr[al-1] = -1;
+        return arr;
+    }
+}
