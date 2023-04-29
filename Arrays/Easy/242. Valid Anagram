@@ -1,0 +1,28 @@
+Author: Mahesh Reddy BN
+
+Problem Link: https://leetcode.com/problems/valid-anagram/description/
+
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        HashMap<Character,Integer> hm = new HashMap<>();
+        int sl = s.length();
+        int tl = t.length();
+        if(sl!=tl) return false;
+        int count = sl;
+        for(int i=0;i<sl;i++){
+            char cur = s.charAt(i);
+            hm.put(cur,hm.getOrDefault(cur,0)+1);
+        }
+        for(int i=0;i<sl;i++){
+            char cur = t.charAt(i);
+            if(hm.containsKey(cur) && hm.get(cur)>0){
+                count--;
+                hm.put(cur,hm.getOrDefault(cur,0)-1);
+            }
+            else{
+                return false;
+            }
+        }
+        return count==0;
+    }
+}
