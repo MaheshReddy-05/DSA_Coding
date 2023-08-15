@@ -5,7 +5,7 @@ class Main{
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         while(n!=0){
-            n--;
+            n--; 
             int num = sc.nextInt();
             int k = num*(num+1)/2;
             List<Integer> al = new ArrayList<>();
