@@ -9,7 +9,8 @@
 char ch[] = s.toCharArray(); 
 - <b>Char Array to String</b>  
 Adding all char array character to a single string
-String.valueOf(chararr);  
+String.valueOf(chararr);
+
 
 ### String Builder
 - <b>Reversing a string</b> 
@@ -55,3 +56,13 @@ hm.put(arr[i],hm.getOrDefault(arr[i],0)+1)
 ### Easy Syntax
 - <b>If statement return a value</b>  
 (a>b) ? true : false ;
+
+- <b>String T to T</b>  
+Double.parseDouble("1.223")
+Integer.parseInt("123")
+Float.parseFloat("23.23")
+
+- <b>Decimal after point till x</b>    
+double d1 = 1.23232  
+DecimalFormat df = new DecimalFormat()  
+d1 = df.format(d1)  
