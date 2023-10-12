@@ -1,13 +1,15 @@
 class Solution {
-    public int maxArea(int[] height) {
-        int max = 0;
-        int si = 0;
-        int ei = height.length-1;
-        while(si<ei){
-            max = Math.max(max,(ei-si)*Math.min(height[si],height[ei]));
-            if(height[si]<height[ei]) si++;
-            else ei--;
-        }
-        return max;
+    public static int countWays(int n) 
+    { 
+        int dp[] = new int[n + 1]; 
+        dp[0] = 1; 
+        dp[1] = 1; 
+        dp[2] = 2;
+        for (int i = 3; i <= n; i++) 
+            dp[i] = dp[i - 1] + dp[i - 2]+dp[i-3]; 
+        return dp[n]; 
+    }
+    public static void main(String[] args) {
+        System.out.println(countWays(5));
     }
 }
