@@ -1,3 +1,7 @@
+// we will take 2 array with -1 
+// First we traverse from l to r and modify
+// Second we traverse from r to l and modify
+
 class Solution {
     public int maxDistToClosest(int[] seats) {
         int al = seats.length;
