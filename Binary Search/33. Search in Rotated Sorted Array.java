@@ -1,5 +1,10 @@
 Problem Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
 Author: Mahesh Reddy B N
+
+// Compare with start element and check 
+// if>start element then it will be in lower plane
+// else it will be in upper plane 
+
 class Solution {
     public int search(int[] nums, int target) {
         int ans = -1;
