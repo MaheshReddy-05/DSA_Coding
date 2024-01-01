@@ -43,7 +43,7 @@ Arrays.binarySearch(arr,10);
 Used in insertion of frequency    
 hm.getOrDefault(arr[i],0)+1 ;   
 hm.put(arr[i],hm.getOrDefault(arr[i],0)+1)   
-- <b>Iterator</b>
+- <b>Iterator</b>  
 HashMap<Integer,String> languages;  
 for (Entry<Integer,String> entry : languages.entrySet()) {  
       System.out.print(entry.getKey());  
