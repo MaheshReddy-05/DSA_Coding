@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Abstract",
+      "request": "launch",
+      "mainClass": "Abstract",
+      "projectName": "DSA_Coding_ceb1eebd"
+    },
+    {
+      "type": "java",
       "name": "Solution",
       "request": "launch",
       "mainClass": "Solution",
