@@ -1,0 +1,34 @@
+// Author: Mahesh Reddy B N
+// Problem Link: https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/description/?envType=daily-question&envId=2024-11-15
+
+class Solution {
+    public int findLengthOfShortestSubarray(int[] arr) {
+        int n = arr.length;
+        int i = 0, j = n - 1;
+        int maxValue = 0;
+
+        while (i < n && arr[i] >= maxValue) {
+            maxValue = arr[i];
+            i++;
+        }
+        int minValue = Integer.MAX_VALUE;
+        while (j >= 0 && arr[j] <= minValue) {
+            minValue = arr[j];
+            j--;
+        }
+        int shortestSubarry = Math.min(n - i, j + 1);
+        if (i == n || j == -1) {
+            return shortestSubarry;
+        }
+        int lo = 0, hi = j + 1;
+        while (lo < i && hi < arr.length) {
+            if (arr[hi] >= arr[lo]) {
+                shortestSubarry = Math.min(shortestSubarry, hi - lo - 1);
+                lo++;
+            }else {
+                hi++;
+            }
+        }
+        return shortestSubarry;
+    }
+}
